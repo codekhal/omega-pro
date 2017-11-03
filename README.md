@@ -1,2 +1,4 @@
 # Omega-Pro
-Add pro level programmes and  tutorials links for begineers 
+A place for learning and exlporing.
+Add pro level programmes and  tutorials links for begineers.
+Learn,Teach and Code like a Pro.
