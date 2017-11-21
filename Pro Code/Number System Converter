@@ -1,0 +1,529 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+#include<string.h>
+int main()
+{
+    printf("choose the option from the give:-\n");
+    printf("1. to convert decimal to binary\n");
+    printf("2. to convert decimal to octal\n");
+    printf("3. to convert decimal to hexadecimal\n");
+    printf("4. to convert binary to decimal\n");
+    printf("5. to convert binary to octal\n");
+    printf("6. to convert binary to hexadecimal\n");
+    printf("7. to convert octal to decimal\n");
+    printf("8. to convert octal to binary\n");
+    printf("9. to convert octal to hexadecimal\n");
+    printf("10. to convert hexadecimal to decimal\n");
+    printf("11. to convert hexadecimal to binary\n");
+    printf("12. to convert hexadecimal to octal\n");
+    int c;
+    scanf("%d",&c);
+    switch(c)
+    {
+    case 1:
+{
+            int b;
+            printf("enter the no. in decimal form ");
+            int n;
+            scanf("%d",&n);
+            b=binary(n);//convert decimal to binary form
+            printf("binary is %d",b);
+            break;
+}
+    case 2:
+        {
+            long long o;
+            printf("enter the no. in decimal form ");
+            int n;
+            scanf("%d",&n);
+            o=octal(n);//convert decimal to octal form
+            printf("octal is %ld",o);
+            break;
+        }
+    case 3:
+        {
+            long long h1;
+            printf("enter the no. in decimal form ");
+            int n;
+            scanf("%d",&n);
+            int r,x=n,i=0;
+            char h[1000];//convert decimal to hexadecimal form
+            while(x>0)
+            {
+            r=x%16;
+            x=x/16;
+            h[i]=hexa(r);
+            i++;
+            }
+            int p=0,j;
+            char k[i-1];
+        for(j=i-1;j>=0;j--)
+        {
+            k[p]=h[j];
+            p++;
+        }
+            printf("hexadecimal form is is %s",k);
+            break;
+        }
+    case 4:
+        {
+            printf("enter a no. in binary form ");
+            int b,d;
+            scanf("%d",&b);
+            d=binden(b);//convert binary to decimal form
+            printf("the decimal form is %d",d);
+            break;
+        }
+    case 5:
+        {
+            printf("enter a no. in binary form ");
+            int b,n,o;
+            scanf("%d",&b);
+            n=binden(b);//convert binary to decimal form
+            o=octal(n);//convert decimal to octal form
+            printf("the octal form is %d",o);
+            break;
+        }
+    case 6:
+        {
+            printf("enter a no. in binary form ");
+            int b,n,hex;
+            scanf("%d",&b);
+            n=binden(b);//convert binary to decimal form
+            int r,x=n,i=0;
+            char h[1000];//convert decimal to hexadecimal form
+            while(x>0)
+            {
+            r=x%16;
+            x=x/16;
+            h[i]=hexa(r);
+            i++;
+            }
+            int p=0,j;
+            char k[i-1];
+        for(j=i-1;j>=0;j--)
+        {
+            k[p]=h[j];
+            p++;
+        }
+            printf("hexadecimal form is is %s",k);
+            break;
+        }
+    case 7:
+        {
+            printf("enter a no. in octal form ");
+            int o,d,b;
+            scanf("%d",&o);
+            d=octden(o);//convert octal to decimal form
+            printf("the decimal form is %d",d);
+            break;
+        }
+    case 8:
+        {
+            printf("enter a no. in octal form ");
+            int o,n,b=0;
+            scanf("%d",&o);
+            b=octden(o);//convert octal to decimal form
+            o=binary(b);//convert decimal to binary form
+            printf("the octal form is %d",o);
+            break;
+        }
+    case 9:
+        {
+            printf("enter a no. in octal form ");
+            int o,n;
+            scanf("%d",&o);
+            n=octden(o);//convert octal to decimal form
+            int r,x=n,i=0;//convert decimal to hexadecimal form
+            char h[1000];
+            while(x>0)
+            {
+            r=x%16;
+            x=x/16;
+            h[i]=hexa(r);
+            i++;
+            }
+            int p=0,j;
+            char k[i-1];
+        for(j=i-1;j>=0;j--)
+        {
+            k[p]=h[j];
+            p++;
+        }
+            printf("hexadecimal form is is %s",k);
+            break;
+        }
+    case 10:
+        {
+            printf("enter a no. in hexadecimal form ");
+            int d=0,n,r,i,j=0;
+            char hex[1000];
+            scanf("%s",hex);
+            int  l=strlen(hex);
+            for(i=l-1;i>=0;i--)//convert hexadecimal to decimal form
+            {
+            if(hex[i]=='0')
+            {
+            r=0;
+            }
+            if(hex[i]=='1')
+            {
+            r=1;
+            }
+            if(hex[i]=='2')
+            {
+            r=2;
+            }
+            if(hex[i]=='3')
+            {
+            r=3;
+            }
+            if(hex[i]=='4')
+            {
+            r=4;
+            }
+            if(hex[i]=='5')
+            {
+            r=5;
+            }
+            if(hex[i]=='6')
+            {
+            r=6;
+            }
+            if(hex[i]=='7')
+            {
+            r=7;
+            }
+            if(hex[i]=='8')
+            {
+            r=8;
+            }
+            if(hex[i]=='9')
+            {
+            r=9;
+            }
+            if(hex[i]=='A')
+            {
+            r=10;
+            }
+            if(hex[i]=='B')
+            {
+            r=11;
+            }
+            if(hex[i]=='C')
+            {
+            r=12;
+            }
+            if(hex[i]=='D')
+            {
+            r=13;
+            }
+            if(hex[i]=='E')
+            {
+            r=14;
+            }
+            if(hex[i]=='F')
+            {
+            r=15;
+            }
+            d=d+(r*pow(16,j));
+            j++;
+            }
+            printf("the decimal form is %d",d);
+            break;
+        }
+        case 11:
+        {
+            printf("enter a no. in hexadecimal form ");
+            int d=0,n,b=0,r,i,j=0;
+            char hex[1000];
+            scanf("%s",hex);
+            int  l=strlen(hex);
+            for(i=l-1;i>=0;i--)//convert hexadecimal to decimal form
+            {
+            if(hex[i]=='0')
+            {
+            r=0;
+            }
+            if(hex[i]=='1')
+            {
+            r=1;
+            }
+            if(hex[i]=='2')
+            {
+            r=2;
+            }
+            if(hex[i]=='3')
+            {
+            r=3;
+            }
+            if(hex[i]=='4')
+            {
+            r=4;
+            }
+            if(hex[i]=='5')
+            {
+            r=5;
+            }
+            if(hex[i]=='6')
+            {
+            r=6;
+            }
+            if(hex[i]=='7')
+            {
+            r=7;
+            }
+            if(hex[i]=='8')
+            {
+            r=8;
+            }
+            if(hex[i]=='9')
+            {
+            r=9;
+            }
+            if(hex[i]=='A')
+            {
+            r=10;
+            }
+            if(hex[i]=='B')
+            {
+            r=11;
+            }
+            if(hex[i]=='C')
+            {
+            r=12;
+            }
+            if(hex[i]=='D')
+            {
+            r=13;
+            }
+            if(hex[i]=='E')
+            {
+            r=14;
+            }
+            if(hex[i]=='F')
+            {
+            r=15;
+            }
+            d=d+(r*pow(16,j));
+            j++;
+            }
+            b=binary(d);//convert decimal to binary form
+            printf("binary form of the no. is %d",b);
+            break;
+        }
+        case 12:
+        {
+            printf("enter a no. in hexadecimal form ");
+            int d=0,n,r,i,j=0;
+            char hex[1000];
+            scanf("%s",hex);
+            int  l=strlen(hex);
+            for(i=l-1;i>=0;i--)//convert hexadecimal to decimal form
+            {
+            if(hex[i]=='0')
+            {
+            r=0;
+            }
+            if(hex[i]=='1')
+            {
+            r=1;
+            }
+            if(hex[i]=='2')
+            {
+            r=2;
+            }
+            if(hex[i]=='3')
+            {
+            r=3;
+            }
+            if(hex[i]=='4')
+            {
+            r=4;
+            }
+            if(hex[i]=='5')
+            {
+            r=5;
+            }
+            if(hex[i]=='6')
+            {
+            r=6;
+            }
+            if(hex[i]=='7')
+            {
+            r=7;
+            }
+            if(hex[i]=='8')
+            {
+            r=8;
+            }
+            if(hex[i]=='9')
+            {
+            r=9;
+            }
+            if(hex[i]=='A')
+            {
+            r=10;
+            }
+            if(hex[i]=='B')
+            {
+            r=11;
+            }
+            if(hex[i]=='C')
+            {
+            r=12;
+            }
+            if(hex[i]=='D')
+            {
+            r=13;
+            }
+            if(hex[i]=='E')
+            {
+            r=14;
+            }
+            if(hex[i]=='F')
+            {
+            r=15;
+            }
+            d=d+(r*pow(16,j));
+            j++;
+            }
+            long long o=octal(d);//convert decimal to octal form
+            printf("the octal form is %ld",o);
+            break;
+        }
+    }
+    return 0;
+}
+    int binary(int n)//convert decimal to binary form
+    {
+       int r,j=0,b=0,x=n,i=0,q[1000];
+       int t[1000];
+       while(x>0)
+       {
+           r=x%2;
+           t[i]=r;
+           x=x/2;
+           i++;
+       }
+       i--;
+       while(i>=0)
+       {
+           q[j]=t[i];
+           i--;
+           j++;
+       }
+       int l;
+       for(l=0;l<j;l++)
+       {
+           b=b*10+q[l];
+       }
+
+       return b;
+    }
+    int octal(int n)//convert decimal to octal form
+    {
+        int r,x=n,i=0;
+        long long o=0;
+        while(x>0)
+        {
+        r=x%8;
+        o=o+(r*pow(10,i));
+        x=x/8;
+        i++;
+        }
+        return o;
+    }
+    int hexa(int r)//convert decimal to hexadecimal form
+    {
+        char a;
+        if(r==0)
+        {
+            return '0';
+        }
+        if(r==1)
+        {
+            return '1';
+        }
+        if(r==2)
+        {
+            return '2';
+        }
+        if(r==3)
+        {
+            return '3';
+        }
+        if(r==4)
+        {
+            return '4';
+        }
+        if(r==5)
+        {
+            return '5';
+        }
+        if(r==6)
+        {
+            return '6';
+        }
+        if(r==7)
+        {
+            return '7';
+        }
+        if(r==8)
+        {
+            return '8';
+        }
+        if(r==9)
+        {
+            return '9';
+        }
+        if(r==10)
+        {
+            return 'A';
+        }
+        if(r==11)
+        {
+            return 'B';
+        }
+        if(r==12)
+        {
+            return 'C';
+        }
+        if(r==13)
+        {
+            return 'D';
+        }
+        if(r==14)
+        {
+            return 'E';
+        }
+        if(r==15)
+        {
+            return 'F';
+        }
+        }
+int binden(int b)//convert binary to decimal form
+{
+    int r,d=0,x=b,i=0;
+    while(x>0)
+    {
+        r=x%10;
+        d=d+(r*pow(2,i));
+        x=x/10;
+        i++;
+    }
+    return d;
+}
+int octden(int o)//convert octal to decimal form
+{
+    int r,d=0,x=o,i=0;
+    while(x>0)
+    {
+        r=x%10;
+        d=d+(r*pow(8,i));
+        x=x/10;
+        i++;
+    }
+    return d;
+}
