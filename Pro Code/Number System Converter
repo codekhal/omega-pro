@@ -17,7 +17,7 @@ int main()
     printf("10. to convert hexadecimal to decimal\n");
     printf("11. to convert hexadecimal to binary\n");
     printf("12. to convert hexadecimal to octal\n");
-    int c;
+     int c;
     scanf("%d",&c);
     switch(c)
     {
@@ -27,7 +27,7 @@ int main()
             printf("enter the no. in decimal form ");
             int n;
             scanf("%d",&n);
-            b=binary(n);//convert decimal to binary form
+            b=binary(n);                                     //convert decimal to binary form
             printf("binary is %d",b);
             break;
 }
@@ -320,7 +320,7 @@ int main()
             char hex[1000];
             scanf("%s",hex);
             int  l=strlen(hex);
-            for(i=l-1;i>=0;i--)//convert hexadecimal to decimal form
+            for(i=l-1;i>=0;i--)                    //convert hexadecimal to decimal form
             {
             if(hex[i]=='0')
             {
@@ -389,14 +389,14 @@ int main()
             d=d+(r*pow(16,j));
             j++;
             }
-            long long o=octal(d);//convert decimal to octal form
+            long long o=octal(d);                                    //convert decimal to octal form
             printf("the octal form is %ld",o);
             break;
         }
     }
     return 0;
 }
-    int binary(int n)//convert decimal to binary form
+    int binary(int n)                                                //convert decimal to binary form
     {
        int r,j=0,b=0,x=n,i=0,q[1000];
        int t[1000];
@@ -422,7 +422,7 @@ int main()
 
        return b;
     }
-    int octal(int n)//convert decimal to octal form
+    int octal(int n)                                    //convert decimal to octal form
     {
         int r,x=n,i=0;
         long long o=0;
@@ -435,7 +435,7 @@ int main()
         }
         return o;
     }
-    int hexa(int r)//convert decimal to hexadecimal form
+    int hexa(int r)                             //convert decimal to hexadecimal form
     {
         char a;
         if(r==0)
@@ -503,7 +503,7 @@ int main()
             return 'F';
         }
         }
-int binden(int b)//convert binary to decimal form
+int binden(int b)                                  //convert binary to decimal form
 {
     int r,d=0,x=b,i=0;
     while(x>0)
@@ -515,7 +515,7 @@ int binden(int b)//convert binary to decimal form
     }
     return d;
 }
-int octden(int o)//convert octal to decimal form
+int octden(int o)                                 //convert octal to decimal form
 {
     int r,d=0,x=o,i=0;
     while(x>0)
