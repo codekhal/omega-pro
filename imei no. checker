@@ -1,0 +1,42 @@
+// A Sample C program for beginners with Competitive Programming
+#include<stdio.h>
+
+// This function returns index of element x in arr[]
+int imei(long n)
+{
+    int r,sum1,sum2=0,c=1;
+    while(n!=0)
+    {
+        r=n%10;
+        if(c%2==0)
+        {
+            r=r*2;
+        }
+        sum1=0;
+        while(r!=0)
+        {
+            sum1=sum1+(r%10);
+            r=r/10;
+        }
+        sum2=sum2+sum1;
+        n=n/10;
+        c++;
+    }
+    return sum2;
+}
+int main()
+{
+    long n;
+    int k;
+    scanf("%ld",&n);
+    k=imei(n);
+    if(k%10==0)
+    {
+        printf("Since, %d is divisible by 10,the imei no. is valid",k);
+    }
+    else
+    {
+        printf("Since, %d is not divisible by 10,the imei no. is not valid",k);
+    }
+    return 0;
+}
