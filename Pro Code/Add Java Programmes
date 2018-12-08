@@ -1,1 +1,58 @@
+import java.util.*;
+public class Solution {
 
+    public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+        int l1,l2,l3;
+            System.out.println("================================");
+            for(int i=0;i<3;i++){
+                String s1=sc.next();
+                int x=sc.nextInt();
+                String s2=sc.next();
+                int y=sc.nextInt();
+                String s3=sc.next();
+                int z=sc.nextInt();
+                System.out.print(s1);
+                l1=s1.length();
+                for(i=l1+1;i<=15;i++)
+                {
+                    System.out.print(" ");
+                }
+                if(x<10)
+                {System.out.print("00"+x+"\n");
+                }
+                else if((x>=10)&&(x<=99))
+                {System.out.print("0"+x+"\n");
+                }
+                else
+                System.out.print(x+"\n");
+                System.out.print(s2);
+                l2=s2.length();
+                for(i=l2+1;i<=15;i++)
+                {
+                    System.out.print(" ");
+                }
+                if(y<10)
+                System.out.print("00"+x+"\n");
+                else if((y>=10)&&(y<=99))
+                System.out.print("0"+y+"\n");
+                else
+                System.out.print(y+"\n");
+                System.out.print(s3);
+                l3=s3.length();
+                for(i=l3+1;i<=15;i++)
+                {
+                    System.out.print(" ");
+                }
+                if(z<10)
+                System.out.print("00"+z+"\n");
+                else if((z>=10)&&(z<=99))
+                System.out.print("0"+z+"\n");
+                else
+                System.out.print(z+"\n");
+                //Complete this line
+            }
+            System.out.println("================================");
+
+    }
+}
