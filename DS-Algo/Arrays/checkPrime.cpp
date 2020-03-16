@@ -20,13 +20,13 @@ bool checkPrimes(int n)
 // 1. Instead of checking till n, we can check till √n.
 
 //    Reason: If for a number n has a factor say a*b = n. 
-//    One of the factor will be less than √n and other will be greater than √n. 
-//    Hence if it has factor its better to check √n. No point in going beyond that.
+//            One of the factor will be less than √n and other will be greater than √n. 
+//            Hence if it has factor its better to check √n. No point in going beyond that.
 
 // 2. Observing that all primes are of the form 6k ± 1.
-//    Reason: it should be noted that not every number of the form 6K ± 1 is Prime.
-//    However, if a number is prime then it must be of the form 6K + 1 OR 6K - 1.
-// Every integer can be written in the form of 6n,6n+1,6n+2,6n+3,6n+46n,6n+1,6n+2,6n+3,6n+4 or 6n+56n+5.
+//    Reason: It should be noted that not every number of the form 6K ± 1 is Prime.
+//            However, if a number is prime then it must be of the form 6K + 1 OR 6K - 1.
+// Every integer can be written in the form of 6n,6n+1,6n+2,6n+3,6n+46n,6n+1,6n+2,6n+3,6n+4 or 6n+5.
 // It is quite evident that 6n is always divisible by 6, 6n+1 may be prime, 6n+2 will always be divisible by 2, 6n+3 by 3, and 6n+4 by 2. 6n+5 may be prime.
 // Our candidates for checking prime are therefore 6n+1 and 6n+5. We can then see that 6n+5 = 6(n+1)−1 = 6x−1.
 
