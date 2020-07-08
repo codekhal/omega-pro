@@ -20,7 +20,7 @@ and does not need to go through the root.
     int maxAns;
     int returnMax(TreeNode* root) // dfs
     {
-        if(!root) // No modes are present
+        if(!root) // No nodes are present
             return 0;
         
         int leftSubTreeSum = returnMax(root->left);

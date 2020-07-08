@@ -1,0 +1,20 @@
+Backtracking is one of my favorite algorithms because of its simplicity and elegance; it doesn’t always have great performance, but it gets the job done. But due to this simplicity, sometimes it's hard to imagine that a complex problem can even be solved by using Backtracking.
+Backtracking is nothing but Recursion with some twist.
+
+1. Print all Combinations of factors (https://www.geeksforgeeks.org/print-combinations-factors-ways-factorize/) 
+
+2. Longest Path in a Maze (https://www.geeksforgeeks.org/find-the-longest-path-in-a-matrix-with-given-constraints/) -> Similar problem will be discussed in the video
+
+3. Words formed using a mobile keypad (https://www.geeksforgeeks.org/java-arraylist-to-print-all-possible-words-from-phone-digits/)
+
+4. Knight Moves in a chessboard (https://www.geeksforgeeks.org/the-knights-tour-problem-backtracking-1/)
+
+5. N queens problem (https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/)
+
+6. Sudoku Solver (https://www.geeksforgeeks.org/sudoku-backtracking-7/)
+
+7. K - Partitions of Array (https://www.geeksforgeeks.org/partition-set-k-subsets-equal-sum/) -> Similar problem will be discussed in the video
+
+8. Find ways to calculate a target from elements of the specified array (https://www.geeksforgeeks.org/number-of-ways-to-calculate-a-target-number-using-only-array-elements/)
+
+Try to think recursively. Use the three simple steps I've discussed in our previous videos on Recursion and think how can you modify recursion to achieve backtracking😉.
