@@ -27,3 +27,6 @@ long long fibonacci(int n)
 
     return fibo[n];
 }
+
+// Time: O(n)
+// Space: O(n), we are using an array to store values.
